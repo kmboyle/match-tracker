@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "J0DGW93Tlr4cVBgI4iMjNDwBmD3r9lYOFStU8JmWrv8o9hBjudnrjRqdKkFk+WSWeM84mYpqwuDirbYOZJEopw==",
+  "dgSpecHash": "npAIa8lqghdPpI7ulSlFfFf9zf6xraWnavQ+f0p395HpeLt6YQFHPZadBpdubT4Vv8ODv56P4qwWk/XLOyyrPg==",
   "success": true,
-  "projectFilePath": "/Users/kevin/my-codes/C#/TrackerLibrary/TrackerLibrary/TrackerLibrary.csproj",
+  "projectFilePath": "C:\\Dev\\csharp\\match-tracker\\TrackerLibrary\\TrackerLibrary.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
