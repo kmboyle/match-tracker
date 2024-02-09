@@ -45,7 +45,7 @@
             firstNameValue = new TextBox();
             firstNameLabel = new Label();
             teamMembersListBox = new ListBox();
-            deleteSeletectedMemberButton = new Button();
+            removeSelectedMemberButton = new Button();
             createTeamButton = new Button();
             addNewMemberGroupBox.SuspendLayout();
             SuspendLayout();
@@ -87,17 +87,18 @@
             addMemberButton.FlatStyle = FlatStyle.Flat;
             addMemberButton.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             addMemberButton.ForeColor = SystemColors.MenuHighlight;
-            addMemberButton.Location = new Point(103, 296);
+            addMemberButton.Location = new Point(103, 274);
             addMemberButton.Name = "addMemberButton";
             addMemberButton.Size = new Size(232, 50);
             addMemberButton.TabIndex = 19;
             addMemberButton.Text = "Add Member";
             addMemberButton.UseVisualStyleBackColor = true;
+            addMemberButton.Click += addMemberButton_Click;
             // 
             // selectTeamMemberDropDown
             // 
             selectTeamMemberDropDown.FormattingEnabled = true;
-            selectTeamMemberDropDown.Location = new Point(47, 229);
+            selectTeamMemberDropDown.Location = new Point(47, 214);
             selectTeamMemberDropDown.Name = "selectTeamMemberDropDown";
             selectTeamMemberDropDown.Size = new Size(389, 38);
             selectTeamMemberDropDown.TabIndex = 18;
@@ -107,7 +108,7 @@
             selectTeamMemberLabel.AutoSize = true;
             selectTeamMemberLabel.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
             selectTeamMemberLabel.ForeColor = SystemColors.MenuHighlight;
-            selectTeamMemberLabel.Location = new Point(38, 189);
+            selectTeamMemberLabel.Location = new Point(38, 174);
             selectTeamMemberLabel.Name = "selectTeamMemberLabel";
             selectTeamMemberLabel.Size = new Size(263, 37);
             selectTeamMemberLabel.TabIndex = 17;
@@ -126,7 +127,7 @@
             addNewMemberGroupBox.Controls.Add(firstNameLabel);
             addNewMemberGroupBox.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
             addNewMemberGroupBox.ForeColor = SystemColors.MenuHighlight;
-            addNewMemberGroupBox.Location = new Point(37, 364);
+            addNewMemberGroupBox.Location = new Point(37, 343);
             addNewMemberGroupBox.Name = "addNewMemberGroupBox";
             addNewMemberGroupBox.Size = new Size(399, 363);
             addNewMemberGroupBox.TabIndex = 20;
@@ -141,12 +142,13 @@
             createMemberButton.FlatStyle = FlatStyle.Flat;
             createMemberButton.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             createMemberButton.ForeColor = SystemColors.MenuHighlight;
-            createMemberButton.Location = new Point(66, 286);
+            createMemberButton.Location = new Point(65, 286);
             createMemberButton.Name = "createMemberButton";
             createMemberButton.Size = new Size(232, 50);
             createMemberButton.TabIndex = 20;
             createMemberButton.Text = "Create Member";
             createMemberButton.UseVisualStyleBackColor = true;
+            createMemberButton.Click += createMemberButton_Click;
             // 
             // cellPhoneValue
             // 
@@ -225,50 +227,51 @@
             teamMembersListBox.BorderStyle = BorderStyle.FixedSingle;
             teamMembersListBox.FormattingEnabled = true;
             teamMembersListBox.ItemHeight = 30;
-            teamMembersListBox.Location = new Point(470, 125);
+            teamMembersListBox.Location = new Point(470, 69);
             teamMembersListBox.Name = "teamMembersListBox";
-            teamMembersListBox.Size = new Size(325, 602);
+            teamMembersListBox.Size = new Size(325, 542);
             teamMembersListBox.TabIndex = 21;
             // 
-            // deleteSeletectedMemberButton
+            // removeSelectedMemberButton
             // 
-            deleteSeletectedMemberButton.FlatAppearance.BorderColor = Color.Silver;
-            deleteSeletectedMemberButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(102, 102, 102);
-            deleteSeletectedMemberButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(242, 242, 242);
-            deleteSeletectedMemberButton.FlatStyle = FlatStyle.Flat;
-            deleteSeletectedMemberButton.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            deleteSeletectedMemberButton.ForeColor = SystemColors.MenuHighlight;
-            deleteSeletectedMemberButton.Location = new Point(824, 391);
-            deleteSeletectedMemberButton.Name = "deleteSeletectedMemberButton";
-            deleteSeletectedMemberButton.Size = new Size(122, 88);
-            deleteSeletectedMemberButton.TabIndex = 22;
-            deleteSeletectedMemberButton.Text = "Deleted Selected";
-            deleteSeletectedMemberButton.UseVisualStyleBackColor = true;
+            removeSelectedMemberButton.FlatAppearance.BorderColor = Color.Silver;
+            removeSelectedMemberButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(102, 102, 102);
+            removeSelectedMemberButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(242, 242, 242);
+            removeSelectedMemberButton.FlatStyle = FlatStyle.Flat;
+            removeSelectedMemberButton.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            removeSelectedMemberButton.ForeColor = SystemColors.MenuHighlight;
+            removeSelectedMemberButton.Location = new Point(824, 391);
+            removeSelectedMemberButton.Name = "removeSelectedMemberButton";
+            removeSelectedMemberButton.Size = new Size(122, 88);
+            removeSelectedMemberButton.TabIndex = 22;
+            removeSelectedMemberButton.Text = "Remove Selected";
+            removeSelectedMemberButton.UseVisualStyleBackColor = true;
+            removeSelectedMemberButton.Click += removeSelectedMemberButton_Click;
             // 
             // createTeamButton
             // 
-            createTeamButton.DialogResult = DialogResult.OK;
             createTeamButton.FlatAppearance.BorderColor = Color.Silver;
             createTeamButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(102, 102, 102);
             createTeamButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(242, 242, 242);
             createTeamButton.FlatStyle = FlatStyle.Flat;
             createTeamButton.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             createTeamButton.ForeColor = SystemColors.MenuHighlight;
-            createTeamButton.Location = new Point(303, 765);
+            createTeamButton.Location = new Point(470, 626);
             createTeamButton.Name = "createTeamButton";
-            createTeamButton.Size = new Size(288, 60);
-            createTeamButton.TabIndex = 25;
+            createTeamButton.Size = new Size(232, 68);
+            createTeamButton.TabIndex = 21;
             createTeamButton.Text = "Create Team";
             createTeamButton.UseVisualStyleBackColor = true;
+            createTeamButton.Click += CreateTeamButton_Click;
             // 
             // CreateTeamForm
             // 
             AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(986, 900);
+            ClientSize = new Size(1042, 741);
             Controls.Add(createTeamButton);
-            Controls.Add(deleteSeletectedMemberButton);
+            Controls.Add(removeSelectedMemberButton);
             Controls.Add(teamMembersListBox);
             Controls.Add(addNewMemberGroupBox);
             Controls.Add(addMemberButton);
@@ -307,7 +310,7 @@
         private TextBox firstNameValue;
         private Label firstNameLabel;
         private ListBox teamMembersListBox;
-        private Button deleteSeletectedMemberButton;
+        private Button removeSelectedMemberButton;
         private Button createTeamButton;
     }
 }
