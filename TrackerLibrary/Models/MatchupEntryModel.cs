@@ -8,6 +8,8 @@ namespace TrackerLibrary.Models
         /// </summary>
         public int Id { get; set; }
 
+        public int TeamCompetingId { get; set; }
+
         /// <summary>
         /// Represents one team in the matchup.
         /// </summary>
@@ -17,6 +19,8 @@ namespace TrackerLibrary.Models
         /// Represents the score for this particular team.
         /// </summary>
         public double Score { get; set; }
+
+        public int ParentMatchupId { get; set; }
 
         /// <summary>
         /// Represents the mathcup this team came from as the winner.
