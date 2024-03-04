@@ -60,7 +60,7 @@
             tournamentName.AutoSize = true;
             tournamentName.Font = new Font("Segoe UI Light", 27.75F, FontStyle.Regular, GraphicsUnit.Point);
             tournamentName.ForeColor = SystemColors.MenuHighlight;
-            tournamentName.Location = new Point(242, 9);
+            tournamentName.Location = new Point(215, 9);
             tournamentName.Name = "tournamentName";
             tournamentName.Size = new Size(150, 50);
             tournamentName.TabIndex = 1;
@@ -76,7 +76,6 @@
             roundLabel.Size = new Size(94, 37);
             roundLabel.TabIndex = 2;
             roundLabel.Text = "Round";
-            roundLabel.Click += roundLabel_Click;
             // 
             // roundDropDown
             // 
@@ -85,6 +84,7 @@
             roundDropDown.Name = "roundDropDown";
             roundDropDown.Size = new Size(231, 38);
             roundDropDown.TabIndex = 3;
+            roundDropDown.SelectedIndexChanged += roundDropDown_SelectedIndexChanged;
             // 
             // unplayedOnlyCheckbox
             // 
@@ -98,6 +98,7 @@
             unplayedOnlyCheckbox.TabIndex = 4;
             unplayedOnlyCheckbox.Text = " Unplayed Only";
             unplayedOnlyCheckbox.UseVisualStyleBackColor = true;
+            unplayedOnlyCheckbox.CheckedChanged += unplayedOnlyCheckbox_CheckedChanged;
             // 
             // matchupListBox
             // 
@@ -108,6 +109,7 @@
             matchupListBox.Name = "matchupListBox";
             matchupListBox.Size = new Size(344, 272);
             matchupListBox.TabIndex = 5;
+            matchupListBox.SelectedIndexChanged += matchupListBox_SelectedIndexChanged;
             // 
             // teamOneName
             // 
@@ -166,7 +168,6 @@
             teamTwoName.Size = new Size(165, 37);
             teamTwoName.TabIndex = 9;
             teamTwoName.Text = "<team two>";
-            teamTwoName.Click += teamTwoName_Click;
             // 
             // versusLabel
             // 
@@ -193,6 +194,7 @@
             scoreButton.TabIndex = 13;
             scoreButton.Text = "Score";
             scoreButton.UseVisualStyleBackColor = true;
+            scoreButton.Click += scoreButton_Click;
             // 
             // TournamentViewerForm
             // 
