@@ -44,6 +44,10 @@
               "target": "Package",
               "version": "[2.1.28, )"
             },
+            "FluentEmail.Smtp": {
+              "target": "Package",
+              "version": "[3.0.2, )"
+            },
             "System.Configuration.ConfigurationManager": {
               "target": "Package",
               "version": "[8.0.0, )"

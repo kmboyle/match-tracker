@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "b9YyzHZM/gMH48QuRWfpk8oHYXoDsIz2homrPb4i6aJsW+TevP3zqrP713NBJS5JtjR5F2KMG+IQs03K/Ikp/Q==",
+  "dgSpecHash": "emJklFek4+JoiX8W+tni/jrCJan76smx/GV/tt2ozu+9WwAVC8l1iI4Lt6HrTgMxXFPuogwCR7U222tRv0oTbg==",
   "success": true,
   "projectFilePath": "C:\\Dev\\csharp\\match-tracker\\TrackerLibrary\\TrackerLibrary.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kevin\\.nuget\\packages\\dapper\\2.1.28\\dapper.2.1.28.nupkg.sha512",
+    "C:\\Users\\Kevin\\.nuget\\packages\\fluentemail.core\\3.0.2\\fluentemail.core.3.0.2.nupkg.sha512",
+    "C:\\Users\\Kevin\\.nuget\\packages\\fluentemail.smtp\\3.0.2\\fluentemail.smtp.3.0.2.nupkg.sha512",
+    "C:\\Users\\Kevin\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\Kevin\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Kevin\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Kevin\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
